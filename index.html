@@ -5,112 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bruno Aro – Data & Projects</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #0d1117;
-      color: #e6edf3;
-      line-height: 1.6;
-      padding: 40px 20px;
+      background-color: #0d1117; color: #e6edf3; line-height: 1.6; padding: 40px 20px;
     }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    h1, h2, h3 {
-      color: #fff;
-      margin-bottom: 10px;
-    }
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    .container { max-width: 900px; margin: 0 auto; }
+    h1, h2, h3 { color: #fff; margin-bottom: 10px; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Avatar */
     img.avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 2px solid #2f343d;
-      margin-bottom: 20px;
+      width: 120px; height: 120px; border-radius: 50%; border: 2px solid #2f343d;
+      margin-bottom: 20px; opacity: 0; animation: fadeIn 1.2s ease-in forwards;
     }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 10px 0 30px;
-    }
-    .skill {
-      background: #161b22;
-      padding: 6px 12px;
-      border-radius: 6px;
-      color: #c9d1d9;
-      font-size: 14px;
-    }
+    @keyframes fadeIn { from { opacity:0; transform: translateY(-10px);} to { opacity:1; transform:none;} }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 30px; }
+    .skill { background:#161b22; padding:6px 12px; border-radius:6px; color:#c9d1d9; font-size:14px; }
+
     .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px; margin-top: 20px;
+    }
+    .card { background:#161b22; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2); }
+    .card h3 { margin-bottom:8px; color:#fff; }
+    .card p { font-size:14px; margin-bottom:10px; color:#c9d1d9; }
+
+    /* Contributions box */
+    .contrib-wrap {
       margin-top: 20px;
+      background:#161b22; border-radius:12px; padding:16px; overflow:auto;
+      border: 1px solid #2f343d;
     }
-    .card {
-      background: #161b22;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    .card h3 {
-      margin-bottom: 8px;
-      color: #fff;
-    }
-    .card p {
-      font-size: 14px;
-      margin-bottom: 10px;
-      color: #c9d1d9;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      text-align: center;
-      color: #8b949e;
-    }
+    .contrib-img { width:100%; max-width:900px; display:block; border-radius:8px; }
+    footer { margin-top: 40px; font-size:14px; text-align:center; color:#8b949e; }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <img src="https://github.com/bruno-aro.png?size=240" alt="Bruno Aro" class="avatar">
+    <!-- Local avatar (make sure avatar.png is in the repo root and <1 MB) -->
+    <img src="./avatar.png" alt="Bruno Aro" class="avatar">
 
     <h1>Bruno Aro</h1>
     <p>
-      Welcome! I’m a graduate of a <strong>Data Science & Machine Learning Bootcamp</strong>, 
-      where I gained hands-on experience with <strong>Python</strong>, <strong>SQL</strong>, 
-      <strong>Tableau</strong>, and <strong>Machine Learning</strong>. I specialise in data wrangling, 
-      visualisation, and statistical analysis, with a strong foundation in building predictive models 
-      and dashboards. Leveraging six years of experience in Learning & Development, I bring 
-      stakeholder management, communication, and project leadership skills to bridge technical 
+      Welcome! I’m a graduate of a <strong>Data Science & Machine Learning Bootcamp</strong>,
+      where I gained hands-on experience with <strong>Python</strong>, <strong>SQL</strong>,
+      <strong>Tableau</strong>, and <strong>Machine Learning</strong>. I specialise in data wrangling,
+      visualisation, and statistical analysis, with a strong foundation in building predictive models
+      and dashboards. Leveraging six years of experience in Learning & Development, I bring
+      stakeholder management, communication, and project leadership skills to bridge technical
       insights with business needs in a data analyst role.
     </p>
 
     <h2>Skills</h2>
     <div class="skills">
-      <div class="skill">Python</div>
-      <div class="skill">SQL</div>
-      <div class="skill">Tableau</div>
-      <div class="skill">Pandas</div>
-      <div class="skill">NumPy</div>
-      <div class="skill">Matplotlib</div>
-      <div class="skill">Seaborn</div>
-      <div class="skill">scikit-learn</div>
-      <div class="skill">Prophet</div>
-      <div class="skill">Data Pipelines</div>
-      <div class="skill">Machine Learning</div>
-      <div class="skill">Storytelling</div>
+      <div class="skill">Python</div><div class="skill">SQL</div><div class="skill">Tableau</div>
+      <div class="skill">Pandas</div><div class="skill">NumPy</div><div class="skill">Matplotlib</div>
+      <div class="skill">Seaborn</div><div class="skill">scikit-learn</div><div class="skill">Prophet</div>
+      <div class="skill">Data Pipelines</div><div class="skill">Machine Learning</div><div class="skill">Storytelling</div>
     </div>
 
     <h2>Highlighted Projects</h2>
@@ -118,9 +73,8 @@
       <div class="card">
         <h3>Bike Project</h3>
         <p>
-          Analyzed the Capital Bikeshare dataset using Python and Machine Learning 
-          to identify usage trends and predict bike demand. Built a regression model 
-          to assist with bike redistribution planning.
+          Analyzed the Capital Bikeshare dataset using Python and Machine Learning to identify usage trends
+          and predict bike demand. Built a regression model to assist with bike redistribution planning.
         </p>
         <a href="https://github.com/bruno-aro/Bike_Project" target="_blank">View on GitHub →</a>
       </div>
@@ -128,9 +82,8 @@
       <div class="card">
         <h3>Wine Project</h3>
         <p>
-          Performed exploratory data analysis on a wine quality dataset using Python, Pandas, 
-          and Matplotlib. Developed a classification model to predict wine quality based on 
-          physicochemical properties.
+          Performed exploratory data analysis on a wine quality dataset using Python, Pandas, and Matplotlib.
+          Developed a classification model to predict wine quality based on physicochemical properties.
         </p>
         <a href="https://github.com/bruno-aro/Wine_Project" target="_blank">View on GitHub →</a>
       </div>
@@ -138,8 +91,8 @@
       <div class="card">
         <h3>SQL E-Commerce Project</h3>
         <p>
-          An SQL-driven project modelling an e-commerce database. Includes schema design, 
-          data population scripts, and example queries to answer real business questions.
+          An SQL-driven project modelling an e-commerce database. Includes schema design, data population scripts,
+          and example queries to answer real business questions.
         </p>
         <a href="https://github.com/bruno-aro/SQL_ECommerce_Project" target="_blank">View on GitHub →</a>
       </div>
@@ -150,10 +103,24 @@
       <p style="opacity:.8;margin:8px 0 16px">
         My GitHub activity in the last year
       </p>
-      <img
-        src="https://github.com/users/bruno-aro/contributions"
-        alt="GitHub contributions calendar for bruno-aro"
-        style="width:100%;max-width:900px;border-radius:12px;background:#0d1117;padding:16px;display:block">
+
+      <!-- Contributions with automatic fallback -->
+      <div class="contrib-wrap">
+        <img
+          id="contrib"
+          class="contrib-img"
+          src="https://github.com/users/bruno-aro/contributions"
+          alt="GitHub contributions calendar for bruno-aro"
+          onerror="this.onerror=null; this.src='https://ghchart.rshah.org/2ea043/bruno-aro';"
+        >
+        <noscript>
+          <img class="contrib-img" src="https://ghchart.rshah.org/2ea043/bruno-aro" alt="GitHub contributions chart for bruno-aro">
+        </noscript>
+      </div>
+
+      <p style="margin-top:10px; font-size:13px; color:#8b949e">
+        If the live GitHub SVG doesn’t load in your browser, a fallback chart is shown.
+      </p>
     </section>
 
     <footer>
