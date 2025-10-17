@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno Aro – Data & Projects</title>
+    <style>
+        /* Reset and base styles */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #121212;
+            color: #e0e0e0;
+            padding: 0 1rem;
+        }
+        a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Layout */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        header img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            font-size: 1rem;
+            color: #bdbdbd;
+            max-width: 600px;
+        }
+        /* Skills section */
+        .skills {
+            margin-top: 2rem;
+        }
+        .skills h2 {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            list-style: none;
+            padding: 0;
+        }
+        .skills-list li {
+            background-color: #1e1e1e;
+            padding: 0.5rem 1rem;
+            border-radius: 0.3rem;
+            font-size: 0.9rem;
+            color: #c7c7c7;
+        }
+        /* Projects section */
+        .projects {
+            margin-top: 3rem;
+        }
+        .projects h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .project-card {
+            background-color: #1e1e1e;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+            color: #ffffff;
+        }
+        .project-card p {
+            flex-grow: 1;
+            margin-bottom: 1rem;
+            color: #c7c7c7;
+            font-size: 0.95rem;
+        }
+        .project-card a {
+            font-weight: bold;
+        }
+        /* Footer */
+        footer {
+            margin-top: 4rem;
+            padding: 2rem 0;
+            text-align: center;
+            color: #777;
+            font-size: 0.85rem;
+            border-top: 1px solid #2e2e2e;
+        }
+        /* Responsive tweaks */
+        @media (min-width: 700px) {
+            header {
+                flex-direction: row;
+                text-align: left;
+            }
+            header img {
+                margin-right: 2rem;
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- Avatar image -->
+            <img src="avatar.png" alt="Bruno Aro avatar illustration" />
+            <div>
+                <h1>Bruno&nbsp;Aro</h1>
+                <p>Welcome! I’m a graduate of a Data Science &amp; Machine Learning bootcamp where I gained hands‑on experience with Python, SQL, Tableau and machine learning. I specialise in data wrangling, visualisation and statistical analysis, with a strong foundation in building predictive models and dashboards. Leveraging six years of experience in learning &amp; development, I bring stakeholder management, communication and project leadership skills to bridge technical insights with business needs in a data analyst role.</p>
+            </div>
+        </header>
+
+        <!-- Skills section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>SQL</li>
+                <li>Tableau</li>
+                <li>Pandas</li>
+                <li>NumPy</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>scikit‑learn</li>
+                <li>Prophet</li>
+                <li>Data Pipelines</li>
+                <li>Machine Learning</li>
+                <li>Storytelling</li>
+            </ul>
+        </section>
+
+        <section class="projects">
+            <h2>Highlighted Projects</h2>
+            <div class="project-list">
+                <div class="project-card">
+                    <h3>Bike Project</h3>
+                    <p>Analyzed the Capital Bikeshare dataset using Python and machine learning to identify usage trends and predict bike demand. Built a regression model to assist with bike redistribution planning.</p>
+                    <a href="https://github.com/bruno-aro/Bike_Project" target="_blank">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Wine Project</h3>
+                    <p>Performed exploratory data analysis on a wine quality dataset using Python, Pandas and Matplotlib. Developed a classification model to predict wine quality based on physicochemical properties.</p>
+                    <a href="https://github.com/bruno-aro/Wine_Project" target="_blank">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>SQL E‑Commerce Project</h3>
+                    <p>An SQL-driven project modelling an e‑commerce database. Includes schema design, data population scripts and example queries to answer real business questions.</p>
+                    <a href="https://github.com/bruno-aro/SQL_ECommerce_Project" target="_blank">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project‑6</h3>
+                    <p>A creative data exploration in Jupyter Notebook. Combines Python, Pandas and visualisation libraries to tell a compelling story through data.</p>
+                    <a href="https://github.com/bruno-aro/Project-6" target="_blank">View on GitHub →</a>
+                </div>
+                <div class="project-card">
+                    <h3>Test</h3>
+                    <p>A sandbox repository for experiments, prototypes and learning new techniques. Check back often to see what’s cooking!</p>
+                    <a href="https://github.com/bruno-aro/Test" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Bruno Aro &middot; <a href="https://github.com/bruno-aro" target="_blank">GitHub Profile</a></p>
+        </footer>
+    </div>
+</body>
+</html>
